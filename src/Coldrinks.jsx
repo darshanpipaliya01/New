@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Sign from './Food/Sign'
 import Header from './Food/Header'
 import Hero from './Food/Hero'
 import Fodbox from './Food/Fodbox'
@@ -32,7 +31,7 @@ function Coldrinks() {
       <Feedback></Feedback>
       <Image></Image>
       <Footer></Footer>
-      {/* <Sign></Sign> */}
+    
 
     </>
 

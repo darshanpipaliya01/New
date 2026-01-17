@@ -49,7 +49,7 @@
 
 // export default Header;
 
-    
+
 
 // ==========================================================================
 
@@ -76,7 +76,7 @@
 //   return (
 //     <>
 //     <Box sx={{ width: "100%", px: { xs: 2, md: 10 }, py: 2, display: "flex", alignItems: "center" }}>
-      
+
 //       {/* LOGO */}
 //       <Box>
 //         <img src={logo} alt="Logo" style={{ width: "150px" }} />
@@ -214,7 +214,7 @@ function Header({ children }) {
         </Box>
 
         {/* DESKTOP MENU */}
-        <Box sx={{ ml:40, display: { xs: "none", md: "flex" }, gap: 4, alignItems: "center" }}>
+        <Box sx={{ ml: 40, display: { xs: "none", md: "flex" }, gap: 4, alignItems: "center" }}>
           {MENU_ITEMS.map((item, idx) => (
             <Typography
               key={idx}
@@ -233,36 +233,10 @@ function Header({ children }) {
           ))}
 
           {/* LOGIN BUTTON */}
-          <Button
-            component={RouterLink}
-            to="/login"
-            variant="outlined"
-            sx={{
-              borderColor: "#006633",
-              color: "#006633",
-              fontWeight: 600,
-              "&:hover": {
-                bgcolor: "#006633",
-                color: "#fff",
-              },
-            }}
-          >
-            Login
-          </Button>
+
 
           {/* SIGNUP / ADMIN BUTTON */}
-          <Button
-            component={RouterLink}
-            to="/admin"
-            variant="contained"
-            sx={{
-              bgcolor: "#006633",
-              fontWeight: 600,
-              "&:hover": { bgcolor: "#004d33" },
-            }}
-          >
-            Admin Panel
-          </Button>
+
         </Box>
 
         {/* MOBILE MENU ICON */}
@@ -307,20 +281,7 @@ function Header({ children }) {
           </Button>
 
           {/* MOBILE ADMIN */}
-          <Button
-            fullWidth
-            component={RouterLink}
-            to="/admin"
-            sx={{
-              mt: 1,
-              bgcolor: "#006633",
-              color: "#fff",
-              fontWeight: 600,
-              "&:hover": { bgcolor: "#004d33" },
-            }}
-          >
-            Admin Panel
-          </Button>
+
         </Box>
       </Drawer>
 

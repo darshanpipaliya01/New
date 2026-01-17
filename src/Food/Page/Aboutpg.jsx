@@ -1,6 +1,5 @@
 import { Box, Typography, Button, Divider, Link, Stack } from "@mui/material";
-import Header from "../Sign";
-
+import Header from '../Header';
 
 const marqueeItems = [
   { type: "text", label: "RICH IN NUTRITION" },

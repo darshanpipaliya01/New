@@ -1,5 +1,5 @@
 import { Box, Typography, Grid } from "@mui/material";
-import Header from "../Sign";
+import Header from '../Header'
 import Footer from "../Footer";
 
 
