@@ -70,9 +70,11 @@ function Hero() {
         <Box sx={{ width: { xs: "100%", md: "50%" }, textAlign: { xs: "center", md: "left" } }}>
           <Typography
             sx={{
-              fontSize: { xs: "36px", sm: "48px", md: "90px" },
-              fontWeight: 700,
+              fontSize: { xs: "36px", sm: "48px", md: "80px" },
+              fontWeight: 600,
               color: "#0096c7",
+              fontFamily: 'cursive',
+
             }}
           >
             Frosty Drinks
@@ -89,7 +91,7 @@ function Hero() {
             Stay Fresh
           </Typography>
 
-          <Typography sx={{ mt: 3, fontSize: "16px", fontWeight: 600, color: "#555" }}>
+          <Typography sx={{ mt: 3, fontSize: "16px", fontWeight: 600, color: "#555", fontFamily: 'inherit' }}>
             For a natural energy drink a strawberry smoothie,
             <br />
             juicer then your taste.
@@ -110,6 +112,8 @@ function Hero() {
               display: "inline-block",
               transition: "0.4s",
               "&:hover": {
+                color: 'black',
+                bgcolor: 'white',
                 transform: "translateY(-6px)",
                 boxShadow: "0 14px 35px rgba(0,0,0,0.3)",
               },

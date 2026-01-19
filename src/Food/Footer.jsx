@@ -122,7 +122,7 @@ function Footer() {
                         src={logo}
                         alt="Logo"
                         style={{
-                            width: "200px",
+                            width: "140px",
                             maxWidth: "100%",
                             transition: "0.4s",
                             cursor: "pointer",
@@ -248,7 +248,7 @@ function Footer() {
                             sx={{
                                 width: "100%",
                                 bgcolor: "#006633",
-                                "&:hover": { bgcolor: "#0096c7" },
+                                "&:hover": { bgcolor: "black" },
                             }}
                         >
                             Subscribe

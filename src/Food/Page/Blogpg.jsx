@@ -113,7 +113,7 @@ function Blogpg() {
                     </Box>
                 </Box>
             </Box>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </>
     )
 }

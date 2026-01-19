@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Box,
     Container,
@@ -9,7 +8,7 @@ import {
     Paper,
 } from "@mui/material";
 import Header from "../Header";
-import Footer from "../Footer";
+import Footer from '../Footer';
 
 const Contact = () => {
     return (
@@ -120,7 +119,9 @@ const Contact = () => {
                     </Paper>
                 </Container>
             </Box>
-            {/* <Footer></Footer> */}
+
+            <Footer></Footer>
+
         </>
     );
 };

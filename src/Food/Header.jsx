@@ -214,14 +214,15 @@ function Header({ children }) {
         </Box>
 
         {/* DESKTOP MENU */}
-        <Box sx={{ ml: 40, display: { xs: "none", md: "flex" }, gap: 4, alignItems: "center" }}>
+        <Box sx={{ ml: 40, display: { xs: "none", md: "flex" }, gap: 6, alignItems: "center" }}>
           {MENU_ITEMS.map((item, idx) => (
             <Typography
               key={idx}
               component={RouterLink}
               to={item.path}
               sx={{
-                fontWeight: 600,
+                fontWeight: 700,
+                fontFamily: 'inherit',
                 color: "#1E3234",
                 textDecoration: "none",
                 position: "relative",

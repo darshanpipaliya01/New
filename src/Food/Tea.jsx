@@ -158,7 +158,7 @@ function Tea() {
                             px: 4,
                             py: 1.5,
                             borderRadius: 2,
-                            "&:hover": { bgcolor: "#0096c7" },
+                            "&:hover": { bgcolor: 'black' },
                         }}
                     >
                         Shop Now

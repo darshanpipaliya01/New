@@ -98,7 +98,7 @@ function Softdrink() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" }, // mobile column, desktop row
+        flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
         justifyContent: "space-between",
         px: { xs: 2, md: 10 },
@@ -107,7 +107,7 @@ function Softdrink() {
       }}
     >
       {/* LEFT SIDE */}
-      <Box sx={{ display: "flex", gap: 4 }}>
+      <Box sx={{ display: "flex", gap: 4, padding: '10px' }}>
         <Box>
           <img src="https://html.imjol.com/khadyo/khadyo/assets/images/img/hticon1.png" alt="" />
 
@@ -121,7 +121,7 @@ function Softdrink() {
             5 Star Rating
           </Typography>
 
-          <Typography sx={{ mt: 1 }}>
+          <Typography sx={{ mt: 1, fontFamily: 'inherit', fontWeight: '500' }}>
             Our All Drink Product <br /> Kegs of the moment!
           </Typography>
 
@@ -163,7 +163,7 @@ function Softdrink() {
               25 Years+
             </Typography>
             <Typography sx={{ fontWeight: 600 }}>
-              experience skills
+              Experience Skills
             </Typography>
           </Box>
         </Box>
@@ -179,7 +179,7 @@ function Softdrink() {
           Health
         </Typography>
 
-        <Typography sx={{ mt: 2 }}>
+        <Typography sx={{ mt: 2, fontFamily: 'inherit', fontWeight: '700' }}>
           Christmas is coming! Get your gifts sorted early, then enjoy festive drinks!
         </Typography>
 
@@ -190,7 +190,7 @@ function Softdrink() {
             src="https://img.freepik.com/premium-photo/smiley-face-with-sunglasses-straw-front-glass-beer_1046684-41171.jpg"
             alt=""
           />
-          <Typography sx={{ ml: 2, fontSize: 20, fontWeight: 700 }}>
+          <Typography sx={{ ml: 2, fontSize: 20, fontWeight: 700, fontFamily: 'cursive' }}>
             They Who Drink Soft <br /> Will think Better
           </Typography>
         </Box>
@@ -199,11 +199,12 @@ function Softdrink() {
           variant="contained"
           sx={{
             mt: 4,
-            bgcolor: "#006633",
+            bgcolor: 'black',
             px: 4,
             py: 1.5,
             "&:hover": {
-              bgcolor: "#004d26",
+              bgcolor: "white",
+              color: 'black',
               transform: "translateY(-3px)",
             },
           }}

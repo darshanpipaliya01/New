@@ -1,31 +1,33 @@
 import { Box, Typography, Grid } from "@mui/material";
 import Header from '../Header'
-import Footer from "../Footer";
+import Footer from '../Footer'
 
 
-function Error(){
-    return(
+function Error() {
+    return (
         <>
-        <Header></Header>
-        <Box>
-            <Box sx={{bgcolor:'#ff679a',padding:'50px'}}>
-            <Typography sx={{ml:30,paddingTop:'50px'}}>
-                <img style={{width:'650px'}} src="https://faryita.wpengine.com/wp-content/themes/faryita/assets/images/404-Error.png" alt="" />
-            </Typography>
-            <Typography sx={{fontSize:'50px',paddingTop:'80px',ml:30,color:'white',fontWeight:'500',fontFamily:'inherit'}}>
-                OPPS ! THE PAGE NOT FOUND.
-            </Typography>
-            <Typography sx={{textAlign:'center',paddingTop:'24px',fontFamily:'inherit',fontSize:'22px',color:'white',fontWeight:'400'}}>
-                We apologize for the inconvenience. You can use our search bar to find what you're <br /> looking for, or contact us for further assistance.
-            </Typography>
-            <Box sx={{paddingTop:'50px',color:'white',ml:60}}>
-                <Typography sx={{width:'150px',padding:'20px',textAlign:'center',fontFamily:'inherit',fontWeight:'400',fontSize:'22px',bgcolor:'#ffc935',color:'black',borderRadius:'50px'}}>
-                    Back To Home
-                </Typography>
+            <Header></Header>
+            <Box>
+                <Box sx={{ bgcolor: '#ff679a', padding: '50px' }}>
+                    <Typography sx={{ ml: 30, paddingTop: '50px' }}>
+                        <img style={{ width: '650px' }} src="https://faryita.wpengine.com/wp-content/themes/faryita/assets/images/404-Error.png" alt="" />
+                    </Typography>
+                    <Typography sx={{ fontSize: '50px', paddingTop: '80px', ml: 30, color: 'white', fontWeight: '500', fontFamily: 'inherit' }}>
+                        OPPS ! THE PAGE NOT FOUND.
+                    </Typography>
+                    <Typography sx={{ textAlign: 'center', paddingTop: '24px', fontFamily: 'inherit', fontSize: '22px', color: 'white', fontWeight: '400' }}>
+                        We apologize for the inconvenience. You can use our search bar to find what you're <br /> looking for, or contact us for further assistance.
+                    </Typography>
+                    <Box sx={{ paddingTop: '50px', color: 'white', ml: 60 }}>
+                        <Typography sx={{ width: '150px', padding: '20px', textAlign: 'center', fontFamily: 'inherit', fontWeight: '400', fontSize: '22px', bgcolor: '#ffc935', color: 'black', borderRadius: '50px' }}>
+                            Back To Home
+                        </Typography>
+                    </Box>
+                </Box>
             </Box>
-            </Box>
-        </Box>
-        {/* <Footer></Footer> */}
+
+            <Footer></Footer>
+
         </>
 
     )

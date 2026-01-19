@@ -4,8 +4,6 @@ import { Box, Grid, Typography, Button, Card, CardMedia } from "@mui/material";
 import Header from '../Header'
 import Footer from '../Footer'
 
-
-
 const products = [
   {
     name: "Banana Juice",
@@ -202,7 +200,7 @@ function OrangeJuiceSection() {
         </Box>
       </Box>
 
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
 
     </>
   );

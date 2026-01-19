@@ -128,7 +128,7 @@ function Menu() {
                             sx={{
                                 fontSize: { xs: 38, md: 50 },
                                 fontWeight: 900,
-                                color: "#006633",
+                                color: "#006632",
                                 transition: "0.4s",
                                 "&:hover": {
                                     letterSpacing: "2px",
@@ -142,9 +142,10 @@ function Menu() {
                         <Typography
                             sx={{
                                 mt: 1,
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: 700,
-                                color: "#2a435d",
+                                color: '#006632',
+                                fontFamily: 'cursive',
                             }}
                         >
                             {item.title}
@@ -155,8 +156,9 @@ function Menu() {
                             sx={{
                                 mt: 1,
                                 fontSize: 14,
-                                fontWeight: 500,
+                                fontWeight: 700,
                                 color: "#2a435d",
+                                fontFamily: 'inherit',
                             }}
                         >
                             {item.desc}

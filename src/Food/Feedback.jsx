@@ -28,20 +28,20 @@ function Feedback() {
     return (
         <Box
             sx={{
-                py: { xs: 8, md: 15 }, // padding top & bottom responsive
-                px: { xs: 3, md: 10 }, // responsive horizontal padding
-                backgroundColor: "#f5f5f5", // optional background
+                py: { xs: 8, md: 15 }, 
+                px: { xs: 3, md: 10 }, 
+                backgroundColor: "#f5f5f5", 
             }}
         >
             <Stack
-                direction={{ xs: "column", sm: "row" }} // stacked on mobile, row on desktop
+                direction={{ xs: "column", sm: "row" }} 
                 spacing={{ xs: 1, sm: 2 }}
                 justifyContent="center"
                 alignItems="center"
             >
                 <Typography
                     sx={{
-                        fontSize: { xs: "28px", sm: "36px", md: "40px" }, // responsive font size
+                        fontSize: { xs: "28px", sm: "36px", md: "40px" }, 
                         fontWeight: 800,
                         fontFamily: "inherit",
                         color: "#2a435d",

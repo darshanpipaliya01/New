@@ -109,7 +109,7 @@ function Fodbox() {
               sx={{
                 paddingTop: "50px",
                 border: "1px solid #a1a0a0ff",
-                padding: "12px",
+                padding: "14px",
                 width: "100%",
                 maxWidth: "240px",
                 mx: "auto",

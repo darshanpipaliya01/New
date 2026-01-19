@@ -1,5 +1,6 @@
 import { Box, Typography, Button, Divider, Link, Stack } from "@mui/material";
 import Header from '../Header';
+import Footer from '../Footer';
 
 const marqueeItems = [
   { type: "text", label: "RICH IN NUTRITION" },
@@ -178,7 +179,7 @@ function Aboutpg() {
 
         </Box>
       </Box>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </>
 
   )

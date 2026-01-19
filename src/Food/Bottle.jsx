@@ -158,6 +158,7 @@ function Bottle() {
                   width: 250,
                   textAlign: "center",
                   borderRadius: 3,
+                  color: '#2a435d',
                   transition: "0.4s",
                   "&:hover": {
                     transform: "translateY(-12px)",
@@ -183,11 +184,11 @@ function Bottle() {
                   <Typography sx={{ fontSize: 22, fontWeight: 800 }}>
                     {item.title}
                   </Typography>
-                  <Typography sx={{ fontSize: 13, py: 2 }}>
+                  <Typography sx={{ fontSize: 13, py: 2, fontFamily: "cursive", fontWeight: '500' }}>
                     It is a long established fact that a reader BBQ Chicken.
                   </Typography>
-                  <Typography sx={{ fontSize: 18, fontWeight: 700 }}>
-                    price : $50.00
+                  <Typography sx={{ fontSize: 18, fontWeight: 700, fontFamily: 'inherit' }}>
+                    Price : $50.00
                   </Typography>
                 </CardContent>
               </Card>
@@ -206,7 +207,9 @@ function Bottle() {
               py: 1.2,
               borderRadius: 2,
               fontWeight: 600,
-              "&:hover": { bgcolor: "#004d26" },
+              color: 'white',
+              "&:hover": { bgcolor: "black", color: 'white' },
+
             }}
           >
             See All Cans
@@ -214,7 +217,7 @@ function Bottle() {
         </Box>
       </Box>
 
-      {/* 🔥 SEE ALL CANS PANEL */}
+      {/* SEE ALL CANS PANEL */}
       <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
         <DialogTitle sx={{ fontWeight: 800 }}>
           All Bottles & Cans 🥤
