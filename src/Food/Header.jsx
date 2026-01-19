@@ -180,7 +180,7 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link as RouterLink } from "react-router-dom";
+// import { Link as RouterLink } from "react-router-dom";
 import logo from "./img/ChatGPT Image Dec 23, 2025, 07_04_39 PM.png";
 
 // ===== CONST VARIABLES =====
@@ -218,7 +218,7 @@ function Header({ children }) {
           {MENU_ITEMS.map((item, idx) => (
             <Typography
               key={idx}
-              component={RouterLink}
+              // component={RouterLink}
               to={item.path}
               sx={{
                 fontWeight: 700,
@@ -257,7 +257,7 @@ function Header({ children }) {
               <ListItem
                 key={idx}
                 button
-                component={RouterLink}
+                // component={RouterLink}
                 to={item.path}
                 onClick={() => setDrawerOpen(false)}
               >
@@ -269,7 +269,7 @@ function Header({ children }) {
           {/* MOBILE LOGIN */}
           <Button
             fullWidth
-            component={RouterLink}
+            // component={RouterLink}
             to="/login"
             sx={{
               mt: 2,
