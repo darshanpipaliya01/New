@@ -1,10 +1,10 @@
 import './App.css';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Aboutpg from './Food/Page/Aboutpg'
 import Menupg from './Food/Page/Menupg'
 import Error from './Food/Page/Error'
@@ -30,7 +30,7 @@ function App() {
   return (
 
     <>
-      <Header></Header>
+      {/* <Header></Header>
       <Hero></Hero>
       <Fodbox></Fodbox>
       <Softdrink></Softdrink>
@@ -41,41 +41,39 @@ function App() {
       <Tea></Tea>
       <Feedback></Feedback>
       <Image></Image>
-      <Footer></Footer>
+      <Footer></Footer> */}
       {/* <Sign></Sign>  */}
 
-      {/* 
-      <Homepg></Homepg>
+      {/*       
+      <Aboutpg></Aboutpg>
       <Menupg></Menupg>
       <Error></Error>
       <Blogpg></Blogpg>
       <Contact></Contact> */}
 
 
-      {/* <Router>
+      <Router>
         <Switch>
           <Route exact path="/">
             <Coldrinks />
           </Route>
-          <Route path="/Aboutpg">
+          <Route path="/About">
             < Aboutpg />
           </Route>
           <Route path="/Error">
-            <  Error />
+            < Error />
           </Route>
-          <Route path="/Menupg">
+          <Route path="/Menu">
             <Menupg />
           </Route>
-          <Route path="/Blogpg">
+          <Route path="/Blog">
             <Blogpg />
           </Route>
           <Route path="/Contact">
             <Contact />
           </Route>
         </Switch>
-      </Router> */}
-
-
+      </Router>
 
     </>
 
