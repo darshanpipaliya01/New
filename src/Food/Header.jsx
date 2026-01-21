@@ -54,36 +54,160 @@
 // // ==========================================================================
 
 
+// import React, { useState } from "react";
+// import { Box, Typography, IconButton, Drawer, List, ListItem, ListItemText, Button } from "@mui/material";
+// import MenuIcon from "@mui/icons-material/Menu";
+// import { Link as RouterLink } from "react-router-dom";
+// import logo from "./img/ChatGPT Image Dec 23, 2025, 07_04_39 PM.png";
+// import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+// // ===== CONST VARIABLES =====
+// const MENU_ITEMS = [
+//   { label: "Home", path: "/" },
+//   { label: "About", path: "/About" },
+//   { label: "Error", path: "/Error" },
+//   { label: "Menu", path: "/Menu" },
+//   { label: "Blog", path: "/Blog" },
+//   { label: "Contact", path: "/Contact" },
+// ];
+
+// function Header({ children }) {
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+
+//   return (
+//     <>
+//       <Box sx={{ width: "100%", px: { xs: 2, md: 10 }, py: 2, display: "flex", alignItems: "center" }}>
+
+//         {/* LOGO */}
+//         <Box>
+//           <img src={logo} alt="Logo" style={{ width: "150px" }} />
+//         </Box>
+
+//         {/* DESKTOP MENU */}
+//         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6, alignItems: "center", ml: 50 }}>
+//           {MENU_ITEMS.map((item, idx) => (
+//             <Typography
+//               key={idx}
+//               component={RouterLink}
+//               to={item.path}
+//               sx={{
+//                 fontWeight: 500,
+//                 fontFamily: 'cursive',
+//                 color: "#1E3234",
+//                 textDecoration: "none",
+//                 position: "relative",
+//                 transition: "0.3s",
+//                 "&:hover": { color: "#006633", transform: "translateY(-2px)" },
+//                 "&::after": {
+//                   content: '""',
+//                   position: "absolute",
+//                   width: "0%",
+//                   height: "2px",
+//                   bottom: -4,
+//                   left: 0,
+//                   bgcolor: "#006633",
+//                   transition: "0.3s",
+//                 },
+//                 "&:hover::after": { width: "100%" },
+//               }}
+//             >
+//               {item.label}
+//             </Typography>
+//           ))}
+//         </Box>
+
+//         {/* MOBILE MENU ICON */}
+//         <IconButton
+//           sx={{ display: { xs: "block", md: "none" } }}
+//           onClick={() => setDrawerOpen(true)}
+//         >
+//           <MenuIcon fontSize="large" />
+//         </IconButton>
+
+//         {/* MOBILE DRAWER */}
+//         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+//           <Box sx={{ width: 250, p: 2 }}>
+//             <List>
+//               {MENU_ITEMS.map((item, idx) => (
+//                 <ListItem key={idx} button component={RouterLink} to={item.path} onClick={() => setDrawerOpen(false)}
+//                   sx={{
+//                     transition: "0.3s",
+//                     "&:hover": { bgcolor: "#006633", color: "#fff", pl: 2 },
+//                   }}
+//                 >
+//                   <ListItemText primary={item.label} />
+//                 </ListItem>
+//               ))}
+//             </List>
+
+
+//             {/* MOBILE BUTTON */}
+//             <Button
+//               fullWidth
+//               sx={{
+//                 mt: 2,
+//                 bgcolor: "#006633",
+//                 color: "#fff",
+//                 py: 1.2,
+//                 borderRadius: "8px",
+//                 fontWeight: 600,
+//                 "&:hover": { bgcolor: "#004d33" },
+//               }}
+//             >
+//               Membership
+//             </Button>
+//           </Box>
+//         </Drawer>
+//       </Box>
+
+//       {children}
+//     </>
+//   );
+// }
+
+// export default Header;
+
+
+// ============================
+
 import React, { useState } from "react";
 import { Box, Typography, IconButton, Drawer, List, ListItem, ListItemText, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink } from "react-router-dom";
-import logo from "./img/ChatGPT Image Dec 23, 2025, 07_04_39 PM.png";
+import logo from "./img/ChatGPT Image Dec 23, 2025, 07_04_39 PM.png"
 
-// ===== CONST VARIABLES =====
 const MENU_ITEMS = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/About" },
-  { label: "Error", path: "/Error" },
-  { label: "Menu", path: "/Menu" },
-  { label: "Blog", path: "/Blog" },
-  { label: "Contact", path: "/Contact" },
+  { label: "About", path: "/about" },
+  { label: "Error", path: "/error" },
+  { label: "Menu", path: "/menu" },
+  { label: "Blog", path: "/blog" },
+  { label: "Contact", path: "/contact" },
 ];
 
-function Header({ children }) {
+function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <>
-      <Box sx={{ width: "100%", px: { xs: 2, md: 10 }, py: 2, display: "flex", alignItems: "center" }}>
-
+      <Box
+        sx={{
+          width: "100%",
+          px: { xs: 2, md: 10 },
+          py: 2,
+          display: "flex",
+          alignItems: "center",
+          bgcolor: "#f5f5f5",
+        }}
+      >
         {/* LOGO */}
         <Box>
           <img src={logo} alt="Logo" style={{ width: "150px" }} />
         </Box>
 
         {/* DESKTOP MENU */}
-        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6, alignItems: "center", ml: 50 }}>
+
+        <Box sx={{ display: { xs: "none", md: "flex" }, ml: 14, gap: 4 }}>
           {MENU_ITEMS.map((item, idx) => (
             <Typography
               key={idx}
@@ -91,28 +215,42 @@ function Header({ children }) {
               to={item.path}
               sx={{
                 fontWeight: 500,
-                fontFamily: 'cursive',
+                ml: 2,
+                fontFamily: "cursive",
                 color: "#1E3234",
                 textDecoration: "none",
-                position: "relative",
-                transition: "0.3s",
-                "&:hover": { color: "#006633", transform: "translateY(-2px)" },
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  width: "0%",
-                  height: "2px",
-                  bottom: -4,
-                  left: 0,
-                  bgcolor: "#006633",
-                  transition: "0.3s",
-                },
-                "&:hover::after": { width: "100%" },
+                "&:hover": { color: "#006633" },
               }}
             >
               {item.label}
             </Typography>
           ))}
+
+
+          {/* LOGIN BUTTON */}
+          <Button
+            component={RouterLink}
+            to="/login"
+            variant="contained"
+            sx={{ ml: 16, bgcolor: "#006633", "&:hover": { bgcolor: "#004d33" } }}
+          >
+            Login
+          </Button>
+
+          {/* SIGNUP BUTTON */}
+          <Button
+            component={RouterLink}
+            to="/signup"
+            variant="outlined"
+            sx={{
+              ml: 2,
+              borderColor: "#006633",
+              color: "#006633",
+              "&:hover": { bgcolor: "#e6ffe6", borderColor: "#004d33" },
+            }}
+          >
+            Signup
+          </Button>
         </Box>
 
         {/* MOBILE MENU ICON */}
@@ -128,169 +266,57 @@ function Header({ children }) {
           <Box sx={{ width: 250, p: 2 }}>
             <List>
               {MENU_ITEMS.map((item, idx) => (
-                <ListItem key={idx} button component={RouterLink} to={item.path} onClick={() => setDrawerOpen(false)}
-                  sx={{
-                    transition: "0.3s",
-                    "&:hover": { bgcolor: "#006633", color: "#fff", pl: 2 },
-                  }}
+                <ListItem
+                  key={idx}
+                  button
+                  component={RouterLink}
+                  to={item.path}
+                  onClick={() => setDrawerOpen(false)}
                 >
                   <ListItemText primary={item.label} />
                 </ListItem>
               ))}
             </List>
 
-            {/* MOBILE BUTTON */}
+            {/* MOBILE LOGIN & SIGNUP */}
             <Button
               fullWidth
+              component={RouterLink}
+              to="/login"
               sx={{
                 mt: 2,
                 bgcolor: "#006633",
                 color: "#fff",
                 py: 1.2,
                 borderRadius: "8px",
-                fontWeight: 600,
                 "&:hover": { bgcolor: "#004d33" },
               }}
             >
-              Membership
+              Login
+            </Button>
+            <Button
+              fullWidth
+              component={RouterLink}
+              to="/signup"
+              sx={{
+                mt: 1,
+                border: "1px solid #006633",
+                color: "#006633",
+                py: 1.2,
+                borderRadius: "8px",
+                "&:hover": { bgcolor: "#e6ffe6", borderColor: "#004d33" },
+              }}
+            >
+              Signup
             </Button>
           </Box>
         </Drawer>
       </Box>
-      {children}
     </>
   );
 }
 
 export default Header;
 
+// ====================================
 
-
-// ============================================================
-
-
-// import React, { useState } from "react";
-// import {
-//   Box,
-//   Typography,
-//   IconButton,
-//   Drawer,
-//   List,
-//   ListItem,
-//   ListItemText,
-//   Button,
-// } from "@mui/material";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import { Link as RouterLink } from "react-router-dom";
-// import logo from "./img/ChatGPT Image Dec 23, 2025, 07_04_39 PM.png";
-
-
-// // ===== CONST VARIABLES =====
-// const MENU_ITEMS = [
-//   { label: "Home", path: "/" },
-//   { label: "About", path: '/Aboutpg' },
-//   { label: "Error", path: "/Error" },
-//   { label: "Menu", path: "/Menupg" },
-//   { label: "Blog", path: "/Blogpg" },
-//   { label: "Contact", path: "/Contact" },
-// ];
-
-// function Header({ children }) {
-//   const [drawerOpen, setDrawerOpen] = useState(false);
-
-//   return (
-//     <>
-//       <Box
-//         sx={{
-//           width: "100%",
-//           px: { xs: 2, md: 10 },
-//           py: 2,
-//           display: "flex",
-//           alignItems: "center",
-//           // justifyContent: "space-between",
-//         }}
-//       >
-//         {/* LOGO */}
-//         <Box>
-//           <img src={logo} alt="Logo" style={{ width: "150px" }} />
-//         </Box>
-
-//         {/* DESKTOP MENU */}
-//         <Box sx={{ ml: 40, display: { xs: "none", md: "flex" }, gap: 6, alignItems: "center" }}>
-//           {MENU_ITEMS.map((item, idx) => (
-//             <Typography
-//               key={idx}
-//               // component={RouterLink}
-//               to={item.path}
-//               sx={{
-//                 fontWeight: 700,
-//                 fontFamily: 'inherit',
-//                 color: "#1E3234",
-//                 textDecoration: "none",
-//                 position: "relative",
-//                 "&:hover": { color: "#006633" },
-//               }}
-//             >
-//               {item.label}
-//             </Typography>
-//           ))}
-
-//           {/* LOGIN BUTTON */}
-
-
-//           {/* SIGNUP / ADMIN BUTTON */}
-
-//         </Box>
-
-//         {/* MOBILE MENU ICON */}
-//         <IconButton
-//           sx={{ display: { xs: "block", md: "none" } }}
-//           onClick={() => setDrawerOpen(true)}
-//         >
-//           <MenuIcon fontSize="large" />
-//         </IconButton>
-//       </Box>
-
-//       {/* MOBILE DRAWER */}
-//       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-//         <Box sx={{ width: 250, p: 2 }}>
-//           <List>
-//             {MENU_ITEMS.map((item, idx) => (
-//               <ListItem
-//                 key={idx}
-//                 button
-//                 component={RouterLink}
-//                 to={item.path}
-//                 onClick={() => setDrawerOpen(false)}
-//               >
-//                 <ListItemText primary={item.label} />
-//               </ListItem>
-//             ))}
-//           </List>
-
-//           {/* MOBILE LOGIN */}
-//           <Button
-//             fullWidth
-//             component={RouterLink}
-//             to="/login"
-//             sx={{
-//               mt: 2,
-//               border: "2px solid #006633",
-//               color: "#006633",
-//               fontWeight: 600,
-//             }}
-//           >
-//             Login
-//           </Button>
-
-//           {/* MOBILE ADMIN */}
-
-//         </Box>
-//       </Drawer>
-
-//       {children}
-//     </>
-//   );
-// }
-
-// export default Header;

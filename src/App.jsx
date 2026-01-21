@@ -11,6 +11,7 @@ import Error from './Food/Page/Error'
 import Blogpg from './Food/Page/Blogpg'
 import Contact from './Food/Page/Contact'
 import Coldrinks from './Coldrinks';
+import Login from './Food/Page/Login';
 import Header from './Food/Header'
 import Hero from './Food/Hero'
 import Fodbox from './Food/Fodbox'
@@ -74,6 +75,13 @@ function App() {
           </Route>
         </Switch>
       </Router>
+
+      <Router>
+        <Route path='/Login' />
+        <Login></Login>
+      </Router>
+
+
 
     </>
 
