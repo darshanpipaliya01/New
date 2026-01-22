@@ -45,14 +45,42 @@
 
 // export default Hero;
 
+// =====================================================
+
+
 import { Box, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField } from "@mui/material";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Hero() {
   const [open, setOpen] = useState(false);
+  const history = useHistory();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    drink: "",
+    quantity: 1,
+    address: "",
+  });
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = () => {
+    // Save order to localStorage
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(formData);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    // Close dialog and go to admin panel
+    handleClose();
+    history.push("/admin");
+  };
 
   return (
     <>
@@ -74,7 +102,6 @@ function Hero() {
               fontWeight: 600,
               color: "#0096c7",
               fontFamily: 'cursive',
-
             }}
           >
             Frosty Drinks
@@ -138,17 +165,48 @@ function Hero() {
         <DialogTitle sx={{ fontWeight: 700 }}>Order Your Drink 🥤</DialogTitle>
 
         <DialogContent sx={{ mt: 1 }}>
-          <TextField fullWidth label="Your Name" margin="normal" />
-          <TextField fullWidth label="Drink Name" margin="normal" />
-          <TextField fullWidth label="Quantity" type="number" margin="normal" />
-          <TextField fullWidth label="Address" multiline rows={3} margin="normal" />
+          <TextField
+            fullWidth
+            label="Your Name"
+            name="name"
+            margin="normal"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Drink Name"
+            name="drink"
+            margin="normal"
+            value={formData.drink}
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Quantity"
+            type="number"
+            name="quantity"
+            margin="normal"
+            value={formData.quantity}
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Address"
+            multiline
+            rows={3}
+            name="address"
+            margin="normal"
+            value={formData.address}
+            onChange={handleChange}
+          />
         </DialogContent>
 
         <DialogActions sx={{ p: 2 }}>
           <Button onClick={handleClose} color="error">
             Cancel
           </Button>
-          <Button variant="contained" onClick={handleClose}>
+          <Button variant="contained" onClick={handleSubmit}>
             Place Order
           </Button>
         </DialogActions>

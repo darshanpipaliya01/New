@@ -18,6 +18,7 @@ function Coldrinks() {
   return (
 
     <>
+    
       <Header></Header>
       <Hero></Hero>
       <Fodbox></Fodbox>
@@ -31,7 +32,6 @@ function Coldrinks() {
       <Image></Image>
       <Footer></Footer>
     
-
     </>
 
   );

@@ -5,53 +5,21 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Aboutpg from './Food/Page/Aboutpg'
-import Menupg from './Food/Page/Menupg'
-import Error from './Food/Page/Error'
-import Blogpg from './Food/Page/Blogpg'
-import Contact from './Food/Page/Contact'
+
+
 import Coldrinks from './Coldrinks';
-import Login from './Food/Page/Login';
-import Header from './Food/Header'
-import Hero from './Food/Hero'
-import Fodbox from './Food/Fodbox'
-import Softdrink from './Food/Softdrink'
-import Menu from './Food/Menu'
-import Bottle from './Food/Bottle'
-import Table from './Food/Table'
-import Juices from './Food/Juices'
-import Tea from './Food/Tea'
-import Feedback from './Food/Feedback'
-import Image from './Food/Image'
-import Footer from './Food/Footer';
-
-
+import Aboutpg from './Food/Page/Aboutpg';
+import Error from './Food/Page/Error';
+import Menupg from './Food/Page/Menupg';
+import Blogpg from './Food/Page/Blogpg';
+import Contact from './Food/Page/Contact';
+import Login from './Login';
+import Admin from './Admin';
 
 function App() {
   return (
 
     <>
-      {/* <Header></Header>
-      <Hero></Hero>
-      <Fodbox></Fodbox>
-      <Softdrink></Softdrink>
-      <Menu></Menu>
-      <Bottle></Bottle>
-      <Table></Table>
-      <Juices></Juices>
-      <Tea></Tea>
-      <Feedback></Feedback>
-      <Image></Image>
-      <Footer></Footer> */}
-      {/* <Sign></Sign>  */}
-
-      {/*       
-      <Aboutpg></Aboutpg>
-      <Menupg></Menupg>
-      <Error></Error>
-      <Blogpg></Blogpg>
-      <Contact></Contact> */}
-
 
       <Router>
         <Switch>
@@ -73,18 +41,17 @@ function App() {
           <Route path="/Contact">
             <Contact />
           </Route>
+          <Route path="/Login">
+            <Login />
+          </Route>
+          <Route path="/Admin">
+          < Admin/>
+          </Route>
         </Switch>
-      </Router>
-
-      <Router>
-        <Route path='/Login' />
-        <Login></Login>
-      </Router>
-
-
+      </Router >
 
     </>
-
+    
   );
 }
 
