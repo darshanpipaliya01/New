@@ -256,6 +256,23 @@ function Footer() {
                     </form>
                 </Box>
             </Box>
+
+            <Box
+                sx={{
+                    borderTop: "1px solid #333",
+                    mt: 8,
+                    pt: 3,
+                    textAlign: "center",
+                    color: "black",
+                    fontFamily: 'inherit',
+                    fontWeight: '600',
+
+                    fontSize: 14,
+                }}
+            >
+                © {new Date().getFullYear()} Frontend by Pipaliya Darshan
+            </Box>
+
         </Box>
     );
 }
