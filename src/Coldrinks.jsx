@@ -12,14 +12,14 @@ import Tea from './Food/Tea'
 import Feedback from './Food/Feedback'
 import Image from './Food/Image'
 import Footer from './Food/Footer';
-
+import Animy from './Amimy';
 
 function Coldrinks() {
   return (
 
     <>
-    
-      <Header></Header>
+
+      {/* <Header></Header>
       <Hero></Hero>
       <Fodbox></Fodbox>
       <Softdrink></Softdrink>
@@ -30,8 +30,11 @@ function Coldrinks() {
       <Tea></Tea>
       <Feedback></Feedback>
       <Image></Image>
-      <Footer></Footer>
-    
+      <Footer></Footer> */}
+
+      <Animy></Animy>
+
+
     </>
 
   );

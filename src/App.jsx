@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Box, Button, Typography } from '@mui/material';
+
 
 
 import Coldrinks from './Coldrinks';
@@ -13,14 +15,13 @@ import Error from './Food/Page/Error';
 import Menupg from './Food/Page/Menupg';
 import Blogpg from './Food/Page/Blogpg';
 import Contact from './Food/Page/Contact';
-import Login from './Login';
 import Admin from './Admin';
 
 function App() {
   return (
 
     <>
-
+      
       <Router>
         <Switch>
           <Route exact path="/">
@@ -41,18 +42,20 @@ function App() {
           <Route path="/Contact">
             <Contact />
           </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/Admin">
-          < Admin/>
+          <Route path='/Admin'>
+            <Admin />
           </Route>
         </Switch>
-      </Router >
+      </Router>
+
 
     </>
-    
+
   );
 }
 
 export default App;
+
+
+
+
